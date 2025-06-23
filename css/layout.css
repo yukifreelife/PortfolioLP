@@ -1,0 +1,38 @@
+/* layout.css などに追記 */
+
+/* ベースコンテナ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* PC以上のレイアウト */
+.card-container {
+  display: flex;
+  gap: 1rem;
+}
+
+/* タブレットまで */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  #hero .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+/* スマホまで */
+@media (max-width: 480px) {
+  .nav-list {
+    display: none; /* ハンバーガーメニュー化の準備 */
+  }
+  .hero {
+    padding: 2rem 1rem;
+  }
+  .hero-cat {
+    width: 120px;
+  }
+}

@@ -4,12 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  　  <meta name="description" content="看護師→副業プログラマー原田佑樹のポートフォリオサイト。HTML/CSS/JS/Ruby/PHPを使用。">  
+    <title>プログラマー ゆうき - ポートフォリオLP</title>
+    <meta name="description" content="看護師→副業プログラマー原田佑樹のポートフォリオサイト。HTML/CSS/JS/Ruby/PHPを使用。">  
     <link rel="icon" href="images/favicon.ico">  
     <!-- Open Graph -->
     <meta property="og:title" content="原田佑樹 ポートフォリオ">
+    <meta property="og:description" content="副業プログラマー／看護師の技術・実績まとめサイト。">
     <meta property="og:image" content="images/og-image.png">
-    <title>プログラマー ゆうき - ポートフォリオLP</title>
+    <meta property="og:url" content="https://yukifreelife.github.io/PortfolioLP/">
+    <meta property="og:type" content="website">
+
+
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/lp.css">
@@ -39,44 +44,63 @@
     </header>
 
     <!-- 私についてセクション -->
-    <section id="about" class="section about">
-        <h2>私について</h2>
-        <p>看護師として6年の実務経験を持ち、2025年1月より本格的にプログラミングを学習開始。</p>
-        <p>チームワークを大切にし、問題解決能力を活かして開発業務に取り組みます。</p>
-        <img src="images/cat-about.png" alt="紹介用ネコキャラクター" class="section-cat">
-    </section>
+    <main>
+        <section id="about" class="section about">
+            <h2>私について</h2>
+            <p>看護師として8年の実務経験を持ち、2025年1月より本格的にプログラミングを学習開始。</p>
+            <p>チームワークを大切にし、問題解決能力を活かして開発業務に取り組みます。</p>
+            <img src="images/cat-about.png" alt="紹介用ネコキャラクター" class="section-cat">
+        </section>
 
-    <!-- スキルセクション -->
-    <section id="skills" class="section skills">
-        <h2>スキル</h2>
-        <div class="card-container">
-            <div class="card">
-                <h3>フロントエンド</h3>
-                <ul>
-                    <li>HTML5 / CSS3</li>
-                    <li>JavaScript (ES6+)</li>
-                    <li>レスポンシブデザイン</li>
-                </ul>
+        <!-- スキルセクション -->
+        <section id="skills" class="section skills">
+            <h2>スキル</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>フロントエンド</h3>
+                    <ul>
+                        <li>HTML5 / CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>レスポンシブデザイン</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>バックエンド</h3>
+                    <ul>
+                        <li>Ruby on Rails</li>
+                        <li>PHP (Laravel)</li>
+                        <li>Node.js</li>
+                    </ul>
+                </div>
+                <img src="images/cat-skills.png" alt="スキル用ネコキャラクター" class="section-cat">
             </div>
-            <div class="card">
-                <h3>バックエンド</h3>
-                <ul>
-                    <li>Ruby on Rails</li>
-                    <li>PHP (Laravel)</li>
-                    <li>Node.js</li>
-                </ul>
-            </div>
-            <img src="images/cat-skills.png" alt="スキル用ネコキャラクター" class="section-cat">
+        </section>
+
+        <!-- お問い合わせセクション -->
+        <section id="contact" class="section contact">
+            <h2>お問い合わせ</h2>
+            <p>ご依頼・ご相談はお気軽にどうぞ。</p>
+             <div class="form-wrapper">
+            <iframe>
+                src="https://docs.google.com/forms/d/e/1FAIpQLSecbfdUlukiP-Sjd1TEhjEANMuupNMsKz5XnubegcMCLehFhQ/viewform?embedded=true"
+                width="640"
+                height="380"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0">読み込んでいます…
+            </iframe>
         </div>
-    </section>
+            <img src="images/cat-contact.png" alt="お問い合わせネコキャラクター" class="section-cat">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 原田佑樹</p>
+        <ul class="social-links">
+            <li><a href="https://twitter.com/ユーザー名" aria-label="Twitter"><img src="images/twitter.svg" alt="Twitter"></a></li>
+            <li><a href="https://github.com/yukifreelife" aria-label="GitHub"><img src="images/github.svg" alt="GitHub"></a></li>
+        </ul>
+    </footer>
 
-    <!-- お問い合わせセクション -->
-    <section id="contact" class="section contact">
-        <h2>お問い合わせ</h2>
-        <p>ご依頼・ご相談はお気軽にどうぞ。</p>
-        <a href="mailto:your.email@example.com" class="btn">メールでお問い合わせ</a>
-        <img src="images/cat-contact.png" alt="お問い合わせネコキャラクター" class="section-cat">
-    </section>
 
     <!-- トップへ戻るボタン -->
     <button id="back-to-top" class="back-to-top">
