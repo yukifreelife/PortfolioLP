@@ -1,5 +1,12 @@
 :root {
-  --color-primary: #ff8c00;
-  --color-bg: #fffaf0;
+ :root {
+  --color-primary: #b39cff;    /* ラベンダー */
+  --color-accent:  #ffb3c1;    /* ピンク */
+  --color-bg:      #f8f6ff;
+  --color-section1: #fffaf7;
+  --color-section2: #e3f6fd;
+  --color-section3: #faf9ff;
   --font-base: 'Noto Sans JP', sans-serif;
+}
+
 }

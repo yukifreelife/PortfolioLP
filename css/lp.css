@@ -17,9 +17,13 @@
   margin: 1em auto; 
 }
 .section { 
-  padding: 3em 1em; 
-  position: relative; 
   text-align: center;
+  background: var(--color-section1);
+  border-radius: 2em;
+  box-shadow: 0 6px 24px rgba(179,156,255,0.08);
+  margin-bottom: 2em;
+  padding: 3em 1em;
+  position: relative;
 }
 .section h2 {
   text-align: center; 
@@ -186,13 +190,13 @@ h1 {
   margin-bottom: 2em;
 }
 #skills {
-  background: linear-gradient(120deg, #f8f6ff 0%, #e3f6fd 100%);
+  background: linear-gradient(120deg,var(--color-bg) 0%, var(--color-section2) 100%);
   border-radius: 2em;
   box-shadow: 0 6px 24px rgba(179,156,255,0.09);
   margin-bottom: 2em;
 }
 #contact {
-  background: #faf9ff;
+  background: var(--color-section3);
   border-radius: 2em;
   box-shadow: 0 6px 24px rgba(179,156,255,0.08);
   margin-bottom: 2em;
