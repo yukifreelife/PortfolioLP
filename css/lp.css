@@ -1,13 +1,87 @@
-.header .hero { text-align: center; padding: 4em 1em; background: url('../images/hero-bg.png') no-repeat center/cover; position: relative; }
-.hero h1 { font-size: 2.5em; color: #333; }
-.tagline { margin-top: 0.5em; color: #666; }
-.hero-cat { width: 150px; margin: 1em auto; }
-.section { padding: 3em 1em; position: relative; }
-.section h2 { text-align: center; margin-bottom: 1em; font-size: 2em; }
-.section-cat { position: absolute; top: -20px; right: 10px; width: 80px; opacity: 0.8; }
-.contact .btn { margin-top: 1em; }
-.back-to-top { position: fixed; bottom: 20px; right: 20px; background: transparent; border: none; display: none; cursor: pointer; }
-.back-to-top img { width: 50px; }
+.header .hero { 
+  text-align: center; 
+  padding: 4em 1em; 
+  background: url('../images/hero-bg.png') no-repeat center/cover; 
+  position: relative; 
+}
+.hero h1 { 
+  font-size: 2.5em; 
+  color: #333; 
+}
+.tagline { 
+  margin-top: 0.5em; 
+  color: #666; 
+}
+.hero-cat { 
+  width: 150px; 
+  margin: 1em auto; 
+}
+.section { 
+  padding: 3em 1em; 
+  position: relative; 
+  text-align: center;
+}
+.section h2 {
+  text-align: center; 
+  color: #b39cff;
+  letter-spacing: 0.04em;
+  text-shadow: 1px 2px 8px #e3e0fa;
+  margin-bottom: 1.6em;
+  font-size: 2.2em;
+}
+h1 {
+  font-size: 2.5em;
+  color: #b39cff;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5em;
+}
+.tagline {
+  color: #a697d1;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.section-cat { 
+  position: absolute; 
+  top: -20px; 
+  right: 10px; 
+  width: 80px; 
+  opacity: 0.8; 
+}
+.section p, .section ul {
+  text-align: center;
+}
+
+.hero-cat,
+.section-cat,
+.deco-cat {
+  box-shadow: 0 8px 24px rgba(179,156,255,0.12);
+  border-radius: 50%;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.hero-cat:hover,
+.section-cat:hover,
+.deco-cat:hover {
+  transform: translateY(-8px) scale(1.08) rotate(-2deg);
+  box-shadow: 0 16px 36px rgba(179,156,255,0.20);
+  z-index: 10;
+}
+
+.contact .btn { 
+  margin-top: 1em; 
+}
+.back-to-top { 
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  background: transparent; 
+  border: none; 
+  display: none; 
+  cursor: pointer; 
+}
+.back-to-top img { 
+  width: 50px; 
+}
 /* index.css */
 #hero {
   background: #fffaf0;
@@ -27,3 +101,142 @@
   display: block;
   margin: 0 auto;
 }
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 1em auto;
+  width: 100%;
+  overflow-x: auto;
+}
+.form-wrapper iframe {
+  max-width: 100%;
+  border: none;
+}
+
+/* 飾り用猫の共通スタイル */
+.bg-cat {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.16;
+  pointer-events: none;
+}
+.left-cat {
+  left: 0; top: 30px;
+  width: 80px;
+  transform: rotate(-10deg);
+}
+.right-cat {
+  right: 0; bottom: -30px;
+  width: 120px;
+  transform: rotate(14deg) scaleX(-1);
+}
+.deco-cat {
+  position: absolute;
+  bottom: 10px;
+  width: 60px;
+  opacity: 0.7;
+}
+.deco-cat-left { left: 20px; }
+.deco-cat-right { right: 20px; }
+
+.cat-balloon {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+.cat-balloon .balloon {
+  background: #fff8fa;
+  color: #b39cff;
+  border: 2px solid #b39cff;
+  border-radius: 16px;
+  padding: 8px 16px;
+  font-size: 1.1em;
+  box-shadow: 2px 4px 8px rgba(180,156,255,0.10);
+  position: relative;
+}
+.cat-balloon .balloon::after {
+  content: '';
+  position: absolute;
+  left: -14px; bottom: 8px;
+  border: 8px solid transparent;
+  border-right: 10px solid #fff8fa;
+}
+
+/* 簡単なゆらゆらアニメーション */
+@keyframes float-cat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px);}
+}
+.bg-cat, .deco-cat {
+  animation: float-cat 3s ease-in-out infinite;
+}
+/* セクションごとに色味や影を追加して、カード感・温かみ・メリハリを出す */
+#hero {
+  background: linear-gradient(135deg, #e8e5ff 0%, #fffaf0 100%);
+  position: relative;
+  border-radius: 2em;
+  box-shadow: 0 6px 24px rgba(179,156,255,0.12);
+  margin-bottom: 2em;
+}
+#about {
+  background: #fffaf7;
+  border-radius: 2em;
+  box-shadow: 0 6px 24px rgba(179,156,255,0.08);
+  margin-bottom: 2em;
+}
+#skills {
+  background: linear-gradient(120deg, #f8f6ff 0%, #e3f6fd 100%);
+  border-radius: 2em;
+  box-shadow: 0 6px 24px rgba(179,156,255,0.09);
+  margin-bottom: 2em;
+}
+#contact {
+  background: #faf9ff;
+  border-radius: 2em;
+  box-shadow: 0 6px 24px rgba(179,156,255,0.08);
+  margin-bottom: 2em;
+}
+.card {
+  background: #fff;
+  border: 2px solid #b39cff;
+  box-shadow: 0 2px 12px rgba(179,156,255,0.07);
+  border-radius: 1.4em;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(179,156,255,0.14);
+}
+.btn {
+  background: linear-gradient(90deg, #b39cff 40%, #ffb3c1 100%);
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(179,156,255,0.08);
+  border: none;
+}
+.btn:hover {
+  background: linear-gradient(90deg, #ffb3c1 30%, #b39cff 100%);
+  filter: brightness(1.08);
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 2em 0.5em;
+    margin-bottom: 1.2em;
+    border-radius: 1em;
+  }
+  .card {
+    width: 98%;
+    margin: 0.5em auto;
+  }
+  .hero-cat {
+    width: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, .section h2 { font-size: 1.3em; }
+  .hero { padding: 1.2em 0.3em; }
+}
+
+
